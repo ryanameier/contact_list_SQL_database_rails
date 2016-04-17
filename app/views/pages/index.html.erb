@@ -1,0 +1,19 @@
+<h1>All contacts</h1>
+
+<a href="/contacts/new"> Add New </a>
+<table>
+  <th>First Name</th>
+  <th>Last Name</th>
+  <th>Email</th>
+  <th>Phone Number</th>
+  
+<% @contacts.each do |person| %>
+<tr>
+  <td><%=person.first_name %></td>
+  <a href= "/contacts/<%= person.id%>"><%= person.first_name %></a>
+  <td><%=person.last_name%></td>
+  <td><%=person.email%></td>
+  <td><%=person.phone_number%></td>
+</tr>
+  <% end%>
+</table>

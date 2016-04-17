@@ -1,0 +1,23 @@
+
+<a href="/contact/<%= @contact.id %>/edit">Edit</a>
+
+<table class="table table-striped">
+<th>Name</th>
+<th>Price</th>
+<th>Image</th>
+<th>Description</th>
+
+<tr>
+<td><%= @contact.first_name %> </td>
+<td><%= @contact.last_name %> </td>
+<td><%=@contact.email %></td>
+<td><%=@contact.phone_number %></td>
+</tr>
+</table>
+
+<a href= "/contacts/<%= @contact.id %>/edit">Edit</a>
+<%= link_to "Delete", "/contacts/#{@contact.id}", method: :delete %>
+
+
+get "/contacts/:id/edit", to: 'pages#edit'
+  delete "/contacts/:id", to: 'pages#destroy'
