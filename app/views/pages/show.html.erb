@@ -1,5 +1,5 @@
 
-<a href="/contact/<%= @contact.id %>/edit">Edit</a>
+<a href="/contacts/<%= @contact.id %>/edit">Edit</a>
 
 <table class="table table-striped">
 <th>Name</th>
@@ -15,9 +15,10 @@
 </tr>
 </table>
 
-<a href= "/contacts/<%= @contact.id %>/edit">Edit</a>
+
 <%= link_to "Delete", "/contacts/#{@contact.id}", method: :delete %>
 
+    <p>Page updated <%= @contact.friendly_updated_at %></p>
 
-get "/contacts/:id/edit", to: 'pages#edit'
-  delete "/contacts/:id", to: 'pages#destroy'
+
+

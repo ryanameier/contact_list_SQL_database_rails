@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
-  get "/contacts", to: 'pages#contacts'
-  root "pages#index"
+  
+  get "/contacts", to: "pages#index"
   get "/contacts/new", to: 'pages#new'
   get "/contacts/:id", to: 'pages#show'
   post"/contacts/:id", to: 'pages#create'
